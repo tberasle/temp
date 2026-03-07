@@ -1,0 +1,89 @@
+{
+  "name": "dme",
+  "title": "Dark Matter System Extensions",
+  "description": "Add Dark Matter features to the Foundry VTT DND5E system.",
+  "author": "CSMcFarland#6471",
+  "authors": [
+    {
+      "name": "CSMcFarland",
+      "discord": "CSMcFarland#6471",
+      "url": "https://gitlab.com/csmcfarland"
+    },
+    {
+      "name": "Android8675",
+      "discord": "Android8675#9424",
+      "email": "66xakfaar@relay.firefox.com",
+      "url": "https://gitlab.com/Android8675"
+    }
+  ],
+  "version": "1.5.0",
+  "minimumCoreVersion": "0.8.9",
+  "compatibleCoreVersion": "9.280",
+  "compatibility": {
+    "minimum": "0.8.9",
+    "verified": "9.280",
+    "maximum": "9.280"
+  },
+  "system": [
+    "dnd5e"
+  ],
+  "scripts": [
+    "/scripts/dm-planet.js"
+  ],
+  "esmodules": [
+    "/esmodules/dme-main.js"
+  ],
+  "dependencies": [
+    {
+      "name": "lib-wrapper",
+      "manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/latest/download/module.json"
+    }
+  ],
+  "styles": [
+    "/styles/dme-main.css",
+    "/styles/dm-planet.css"
+  ],
+  "packs": [
+    {
+      "name": "macro",
+      "label": "Dark Matter Extension Macros",
+      "path": "./packs/macro.db",
+      "entity": "Macro",
+      "module": "dme",
+      "private": true
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "url": "https://gitlab.com/dark-matter1/dme",
+  "manifest": "https://gitlab.com/api/v4/projects/27171046/packages/generic/dme/1.5.0/module.json",
+  "download": "https://gitlab.com/api/v4/projects/27171046/packages/generic/dme/1.5.0/dme.zip",
+  "readme": "README.md",
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "manifest": "https://raw.githubusercontent.com/foundryvtt/dnd5e/master/system.json",
+        "compatibility": {
+          "verified": "1.6.3"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "lib-wrapper",
+        "type": "module",
+        "manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/latest/download/module.json",
+        "compatibility": {
+          "verified": "1.12.8.0"
+        }
+      }
+    ]
+  }
+}
